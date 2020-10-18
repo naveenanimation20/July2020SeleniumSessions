@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+
+<suite name="Test automtion regression suite" thread-count="3"
+	parallel="tests" verbose="2">
+
+
+	<test name="my regression Test">
+		<parameter name="browser" value="chrome" />
+		<parameter name="url" value="http://www.amazon.com" />
+
+		<classes>
+			<class name="MyTests.AmazonTest" />
+		</classes>
+	</test>
+
+	<test name="Google Test">
+		<parameter name="browser" value="chrome" />
+		<classes>
+			<class name="MyTests.GoogleTest" />
+		</classes>
+	</test>
+
+	<test name="CRM Test">
+		<parameter name="browser" value="chrome" />
+		<classes>
+			<class name="MyTests.ClassicCrmTest" />
+		</classes>
+	</test>
+
+</suite>
